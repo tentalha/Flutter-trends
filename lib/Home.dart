@@ -27,24 +27,57 @@ class Home extends StatelessWidget {
       //   padding: EdgeInsets.all(20.0),
       //   margin: EdgeInsets.all(80.0),
       // ),
-      body: Container(
-          padding: EdgeInsets.all(20.0),
-          margin: EdgeInsets.fromLTRB(0, 20.0, 0, 0),
-          child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: <Widget>[
-                const Text('Hello, World'),
-                ElevatedButton(
-                  onPressed: () {},
-                  child: const Text('All Good?'),
-                ),
-                Container(
-                  child: OutlinedButton(
-                    child: const Text('See trends!'),
-                    onPressed: () {},
-                  ),
-                )
-              ])),
+      // body: Container(
+      //     padding: const EdgeInsets.all(20.0),
+      //     margin: const EdgeInsets.fromLTRB(0, 20.0, 0, 0),
+      //     child: Column(
+      //         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      //         children: <Widget>[
+      //           const Text('Hello, World'),
+      //           ElevatedButton(
+      //             onPressed: () {},
+      //             child: const Text('All Good?'),
+      //           ),
+      //           Container(
+      //             child: OutlinedButton(
+      //               child: const Text('See trends!'),
+      //               onPressed: () {},
+      //             ),
+      //           )
+      //         ])),
+      body: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        children: <Widget>[
+          Expanded(
+            flex: 3,
+            child: Image.asset('assets/pic.jpg'),
+          ),
+          Expanded(
+            flex: 2,
+            child: Container(
+              padding: const EdgeInsets.all(20.0),
+              color: Colors.blue,
+              child: const Text("Hi!"),
+            ),
+          ),
+          Expanded(
+            flex: 2,
+            child: Container(
+              padding: const EdgeInsets.all(20.0),
+              color: Colors.greenAccent,
+              child: const Text("How are you?"),
+            ),
+          ),
+          Expanded(
+            flex: 3,
+            child: Container(
+              padding: const EdgeInsets.all(20.0),
+              color: Colors.blueGrey,
+              child: const Text("How's Life?"),
+            ),
+          ),
+        ],
+      ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           print('Clicked');
